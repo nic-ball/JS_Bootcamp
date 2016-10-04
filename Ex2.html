@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+<h1>Exercise 2</h1>
+<form>
+    <!--Asks for a user input to be displayed as an alert message-->
+    <span>What is your name?: </span>
+    <input id="yourName" type="text"/>
+</form>
+<button id="inputButton">Click Me</button>
+<p id="reply"></p>
+<script src="new.js"></script>
+
+<form>
+    <span>Please input 3 values!</span>
+    <input id="num" type="number"/>
+    <input id="num1" type="number"/>
+    <input id="num2" type="number"/>
+</form>
+<button id="inputButton1">Click Me</button>
+<p id="reply1"></p>
+<script src="new1.js"></script>
+
+<form>
+    <span>Local and Global variables</span>
+    <p id="global"></p>
+    <p id="local"></p>
+</form>
+<script src="new2.js"></script>
+
+<form>
+    <span>For Loop</span>
+<p id="loop1" type="number"/>
+    </form>
+<!--create a for loop starting at 1 and counting up to 50, printing to screen-->
+<script type="text/javascript">
+
+    var whatever = document.getElementById("loop1");
+
+    var num;
+
+    for (num = 1; num <=50; num++) {
+        whatever.innerHTML += " " + num;
+    }
+
+</script>
+
+<!--display current time and date to webpage-->
+<form>
+    <span>Current Date and Time</span>
+</form>
+<p id="time" type="number"/>
+
+<script type="text/javascript">
+
+    var d = Date();
+    document.getElementById("time").innerHTML = Date();
+
+</script>
+
+<!--create a while loop from 1-10-->
+<form></form>
+<p id="loop2" type="number"/>
+<script type="text/javascript">
+
+    var count = 1;
+    document.write("Starting Loop : ");
+
+    while (count <= 10) {
+        document.write(count + " "); count++;
+    }
+
+
+</script>
+
+
+<!--create a do while loop from 1-10-->
+<form></form>
+
+<script type="text/javascript">
+
+    var count = 1;
+    document.write("Starting Loop : " + "<br />");
+    do {
+        document.write("Current Count : " + count + "<br />"); count++;
+    }
+
+    while (count < 11);
+    document.write("Loop Stopped! ");
+
+</script>
+
+<!--nested loop-->
+<form></form>
+
+<script type="text/javascript">
+
+    var num1 = 1;
+    while (num1 <= 10) {
+        document.write("Starting Loop : " + num1 + "<br />"); num1++;
+
+        var num2 = 1;
+        while (num2 <= 10) {
+            document.write("&nbsp;&nbsp;&nbsp;&nbsp;Current Count : " + num2 + "<br />"); num2++;
+
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

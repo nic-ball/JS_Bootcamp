@@ -2,8 +2,8 @@
  * Created by nicholas.ball on 03/10/2016.
  */
 //Collect two numbers and tell user if one or both are greater than 10
-e8 = document.getElementById("inputButton7");
-addEventListener("click", function() {
+var e8 = document.getElementById("inputButton7");
+e8.addEventListener("click", function() {
     var ninthNumber = parseInt(document.getElementById("num9").value);
     var tenthNumber = parseInt(document.getElementById("num10").value);
     if (ninthNumber >10)
