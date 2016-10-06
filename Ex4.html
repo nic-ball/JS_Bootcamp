@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Exercise 4</h1>
-<b />
+<b/>
 <h2>Arrays</h2>
 <form>
     <span>Enter Your 3 Favorite Fruits</span>
@@ -20,18 +20,109 @@
 
 <form>
     <span>JavaScript Push Array Method</span>
-    </form>
+</form>
 <script type="text/javascript">
     var numbers = new Array(1, 4, 9);
 
     numbers.push(10);
-    document.write("New number is : " + numbers );
+    document.write("New number is : " + numbers);
 
     numbers.push(20);
-    document.write("<br />New number is : " +numbers );
+    document.write("<br />New number is : " + numbers);
     document.write("<br />" + "The array length is : " + numbers.length);
 
 </script>
 
+<br/>
+
+<form>
+    <br/>
+    <span>On, Off, Push, Pop Methods</span>
+    <br/>
+</form>
+<script type="text/javascript">
+    //create array
+    var myArray = ["green", "red", "blue", "yellow"];
+
+    //show contents of array
+    document.write("<br />" + "These are colours : " + myArray);
+
+    //added 2 colours
+    var pushed = myArray.push("purple", "green");
+    document.write("<br />" + "These colours were added : " + myArray);
+
+    //remove last member of array
+    var popped = myArray.pop();
+    document.write("<br />" + "This colour was removed : " + popped);
+
+    //display array length
+    document.write("<br />" + "This is the arrays length : " + myArray.length);
+
+    //shifted zero index to last in order
+    var shifted = myArray.shift();
+    document.write("<br />" + "Shifted : " + shifted);
+    document.write("<br />" + "These are the colours currently in the array : " + myArray);
+
+    //unshift the array
+    var unshifted = myArray.unshift();
+    document.write("<br />" + "Array length after the shift : " + unshifted);
+    document.write("<br />" + "Final array listing : " + myArray);
+
+    //add new contents to an array at a specific index point
+    //2 is position of add, 0 is items removed + "string"
+    var splice = myArray.splice(2, 0, "orange");
+    document.write("<br />" + "Add new content to a specific position : no return value " + splice);
+    document.write("<br />" + "New array listing with content added : " + myArray);
+
+</script>
+
+<form>
+    <br/>
+    <span>Array For Loop</span>
+    <br/>
+    <script type="text/javascript">
+        //create array with 10 elements and print the length of the array
+        var myArray1 = ["Burnley", "Spurs", "Utd", "Stanley", "Arsenal", "Everton", "Scouse", "Brighton", "Brentford", "Chelsea"];
+
+        //show array length
+        document.write("<br />" + "Length of Array : " + myArray1.length + "<br />");
+
+        //create for loop to list all elements in the array
+        for (var i = 0, len = myArray1.length; i < len; i++) {
+            document.write(myArray1 [i] + "<br />");
+        }
+
+
+    </script>
+</form>
+
+<form>
+    <br/>
+    <Span>Please Enter the Name of a Country!</Span>
+    <input id="input1" type="text"/>
+    <br/>
+</form>
+<button id="search">Submit</button>
+<p id="reply2"></p>
+<script type="text/javascript">
+
+
+    var button = document.getElementById("search");
+    button.addEventListener("click", function () {
+        //create array containing countries
+        var formInput = (document.getElementById("input1").value).toLowerCase();
+        var country = ["england", 'france', "italy", "mexico", "poland", "russia", "china", "greece", "eygpt", "india"];
+
+        //search array to see if inputted country is part of the array
+        if ( country.indexOf( formInput ) <0) {
+            document.getElementById("reply2").innerHTML = "This country is not in the array!";
+        }else{
+        document.getElementById("reply2").innerHTML = "This country is in the array!";
+        }
+    },false);
+
+
+
+</script>
 </body>
 </html>

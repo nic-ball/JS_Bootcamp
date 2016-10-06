@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Winner Generator</title>
+</head>
+<body>
+<h1>Random Winner Generator</h1>
+<form>
+    <!--ask user to input names into input box-->
+    <span>Add some names to find the winner!</span>
+    <input id="name" type="text" />
+</form>
+<button id="getNames">Add Names</button>
+<p id="names"></p>
+<p id="winner1"></p>
+<br />
+<button id="winner">Click to WIN</button>
+
+<script type="text/javascript">
+    //get a list of names from user input and store them in an array
+    //use this array to randomly generate a winner
+
+    //create an empty array
+    var namesArr = [];
+
+    function printNames() {
+        var names = document.getElementById("names");
+        names.innerHTML = "";
+        for (var i = 0; i < namesArr.length; i++) {
+            names.innerHTML += namesArr[i] + "<br />";
+        }
+    }
+
+    var getNames = document.getElementById("getNames");
+    getNames.addEventListener("click", function () {
+
+        //get names from input
+        var name = document.getElementById("name").value;
+
+        namesArr.push( name );
+
+        printNames();
+
+
+    });
+
+    var getWinner = document.getElementById("winner");
+    getWinner.addEventListener("click", function () {
+
+        //randomly generate the winner
+        var theWinner = namesArr[Math.floor(Math.random() * namesArr.length)];
+        document.getElementById("winner1").innerHTML = "And the Winner is : " + theWinner;
+    });
+
+    /**
+     * 1. Create function printNames()
+     * 2. Inside this function:
+     *     - Define variable "names" with document.getEle...("names") OUTSIDE LOOP
+     *     - Make a loop to loop through namesArr and append each name to names.innerHTML
+     *     - Also add a <br />
+     * 3. Call printNames() inside the eventListener
+     */
+</script>
+<br />
+
+</body>
+</html>
