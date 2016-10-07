@@ -1,0 +1,26 @@
+body {
+    background-color: lightblue;
+}
+h1 {
+    text-align: center;
+    color: darkslategray;
+    font-family: AppleGothic;
+    font-size: 32px;
+}
+h3 {
+    text-align: center;
+    color: darkslategray;
+    font-family: AppleGothic;
+}
+ #myDiv {
+    text-align: center;
+     font-family: AppleGothic;
+    font-size: 19px;
+     color: darkslategray;
+}
+
+
+
+button {
+    align-content: center;
+}

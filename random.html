@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Random Winner Generator</title>
 </head>
+
 <body>
 <h1>Random Winner Generator</h1>
 <form>
@@ -31,7 +33,7 @@
             names.innerHTML += namesArr[i] + "<br />";
         }
     }
-
+    //gets names and pushes them to the empty array
     var getNames = document.getElementById("getNames");
     getNames.addEventListener("click", function () {
 

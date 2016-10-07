@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salary Tax Calculator</title>
+    <link rel="stylesheet" type="text/css" href="taxcalc.css">
+</head>
+<body>
+<h1>Salary Tax Calculator</h1>
+<h3>2016 - 2017</h3>
+<div id="myDiv">
+<form>
+    <span>Please Enter your Gross Salary(Before Deductions)</span>
+    <input id="sal" type="number" value="0" />
+    </form>
+<button id="taxCal">Calculate Tax</button>
+
+<br />
+
+<p id="sal1" type="number"/>
+<p id="sal2" type="number"/>
+<p id="sal3" type="number"/>
+<p id="sal4" type="number"/>
+<p id="sal5" type="number"/>
+    </div>
+<script type="text/javascript">
+    //get user input and return the amount of tax payable
+    //plus how much net salary to expect
+t1= document.getElementById("taxCal");
+    t1.addEventListener("click", function()
+    {
+        var net;
+        //Variables to use for the calculator
+        var income = parseInt(document.getElementById("sal").value); //gross salary
+        var taxFree = 11000;
+        var tax20;
+        var tax40;
+
+        //started with the highest tax rate to remove it from the equation later
+        if ( income > 43000)
+        {
+            tax40 = (income - 43000) * 0.4;
+            tax20 = (32000 * 0.2);
+
+            document.getElementById("sal1").innerHTML = "Gross salary is: " + income;
+            document.getElementById("sal4").innerHTML = "Tax paid at 40%: " + tax40;
+            document.getElementById("sal3").innerHTML = "Tax paid at 20%: " + tax20;
+            document.getElementById("sal5").innerHTML = "Net Salary: " + (income - tax40 - tax20);
+        }
+        else if ( income > 11000 && income <= 43000 ) //the 20% tax rate
+        {
+            tax20 = (income - 11000) * 0.2;
+            document.getElementById("sal1").innerHTML = "Gross salary is: " + income;
+            document.getElementById("sal3").innerHTML = "Tax paid at 20%: " + tax20;
+            document.getElementById("sal4").innerHTML = "Tax paid at 40%: " + 0;
+            document.getElementById("sal5").innerHTML = "Net Salary: " + (income - tax20);
+
+        }
+        //tax free allowance
+        else if ( income <= 11000)
+        {
+            document.getElementById("sal1").innerHTML = "Gross salary is: " + income;
+            document.getElementById("sal2").innerHTML = "Tax free allowance: " + taxFree;
+            document.getElementById("sal5").innerHTML = "Net Salary: " + (income);
+        }
+    });
+
+
+
+
+
+</script>
+
+</body>
+</html>
