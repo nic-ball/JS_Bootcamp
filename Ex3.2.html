@@ -1,3 +1,6 @@
+<!--Interest only calculator-->
+<!--takes 3 separate inputs and uses javascript -->
+<!--to calculate the result-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,45 +13,33 @@
 <b />
 <h2>Interest Only Calculator</h2>
 
-<table>
-    <tr>
-        <td>
-            Amount to Borrow
-        </td>
-        <td>
-            <input id="num" type="number" value="0"/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Interest Rate %
-        </td>
-        <td>
-            <input id="num1" type="number" value="0"/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Length of Loan
-        </td>
-        <td>
-            <input id="num2" type="number" value="0"/>
-        </td>
-    <tr>
-        <td>
-            Total
-        </td>
-        <td>
-            <input id="tot" type="number" value="0"/>
-        </td>
-    </tr>
-</table>
+<form>
+    <span>Amount to Borrow</span>
+    <br />
+    <input id="num" type="number" value="0"/>
+</form>
+<form>
+    <span>Interest Rate %</span>
+    <br />
+    <input id="num1" type="number" value="0"/>
+</form>
+<form>
+    <span>Length of Loan</span>
+    <br />
+    <input id="num2" type="number" value="0"/>
+</form>
+<br />
 <button id="inputButton">Click Me</button>
-<script src="interest.js"></script>
-<table>
-    <tr>
+<br />
+<form>
+    <br />
+    <input id="tot" type="number" value="0"/>
+    <br />
+    <span>Total</span>
 
-    </tr>
-</table>
+</form>
+
+<script src="interest.js"></script>
+
 </body>
 </html>

@@ -1,6 +1,17 @@
 body {
     text-align: center;
+    background-color: steelblue;
 }
-table {
+h1 {
+    font-family: AppleGothic;
+    font-size: 40px;
+    font-style: normal;
+    color: black;
+}
+form {
     text-align: center;
+    text-justify: auto;
+}
+button {
+    align-items: center;
 }
