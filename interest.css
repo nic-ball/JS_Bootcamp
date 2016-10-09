@@ -8,6 +8,12 @@ h1 {
     font-style: normal;
     color: black;
 }
+h2 {
+    font-family: AppleGothic;
+    font-size: 25px;
+    font-style: italic;
+    color: black;
+}
 form {
     text-align: center;
     text-justify: auto;
